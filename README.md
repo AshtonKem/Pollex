@@ -1,13 +1,13 @@
-# pollex
+# Pollex
 
-A Clojure library designed to ... well, that part is up to you.
+ClojureScript bindings for the popular Backbone.js library.
 
 ## Usage
 
-FIXME
+Pollex is still in alpha, the API may change.
 
 ## License
 
-Copyright © 2014 FIXME
+Copyright © 2014 Ashton Kemerling
 
 Distributed under the Eclipse Public License, the same as Clojure.
