@@ -1,6 +1,8 @@
 (ns pollex.core)
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(extend-type Backbone.Collection
+  ISeq
+  (-first [this] (.first this))
+  (-next [this] (rest (.-models this)))
+  ISeqable
+  (-seq [this] (.-models this)))
