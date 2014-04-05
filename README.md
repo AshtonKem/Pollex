@@ -1,4 +1,5 @@
 # Pollex
+[![Build Status](https://travis-ci.org/AshtonKem/Pollex.svg?branch=master)](https://travis-ci.org/AshtonKem/Pollex)
 
 ClojureScript bindings for the popular Backbone.js library.
 
