@@ -3,6 +3,9 @@
   (:require [cemerick.cljs.test :as t]
             [pollex.core]))
 
+(deftest seq-test
+  (is (seq? (Backbone.Collection.))))
+
 (deftest first-test
   (testing "when the collection is empty"
     (is (= (first (Backbone.Collection.))
@@ -21,3 +24,12 @@
   (let [objects (take 4 (map #(Backbone.Model.) (range)))]
     (is (= (filter #(= "c2" (.-cid %)) (Backbone.Collection. (apply array objects)))
            (filter #(= "c2" (.-cid %)) objects)))))
+
+(deftest into-test
+  (let [objects (take 4 (map #(Backbone.Model.) (range)))]
+    (is (= (map #(.-cid %) objects)
+           (map #(.-cid %) (into (Backbone.Collection.) objects))))
+    (is (= (map #(.-cid %) objecs)
+           (into '() (Backbone.Collection. (apply array objects)))))))
+
+
