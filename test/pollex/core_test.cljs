@@ -29,7 +29,7 @@
   (let [objects (take 4 (map #(Backbone.Model.) (range)))]
     (is (= (map #(.-cid %) objects)
            (map #(.-cid %) (into (Backbone.Collection.) objects))))
-    (is (= (map #(.-cid %) objecs)
-           (into '() (Backbone.Collection. (apply array objects)))))))
+    (is (= (map #(.-cid %) objects)
+           (map #(.-cid %) (into [] (Backbone.Collection. (apply array objects))))))))
 
 
